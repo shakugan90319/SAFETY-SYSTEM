@@ -1,0 +1,121 @@
+
+
+/*  test*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header {
+    background: #1e88e5;
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    background: #1e88e5;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.status-box {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.status {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.safe {
+    border-color: #4caf50;
+    color: #4caf50;
+}
+
+.warning {
+    border-color: #ff9800;
+    color: #ff9800;
+}
+
+.danger {
+    border-color: #f44336;
+    color: #f44336;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.table th {
+    background: #f0f2f5;
+}
+
+
