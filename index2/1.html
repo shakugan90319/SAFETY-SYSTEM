@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>安否確認</title>
+  <link rel="stylesheet" href="./css/1.css">
+</head>
+<body>
+
+  <div class="header">
+    <h2>安否確認システム</h2>
+
+    <form action="logout.php" method="post" class="logout-form">
+   <button type="submit" class="logout-btn">ログアウト</button> 
+    </form>
+  </div>
+
+  <!-- 限制高度 -->
+  <div class="main">
+    <div class="card">
+      <h3>安否報告</h3>
+
+      <form action="anpi_result.php" method="post">
+
+        <div class="status">
+          <label class="safe">
+            <input type="radio" name="status" value="無" required>
+            無事
+          </label>
+
+          <label class="warning">
+            <input type="radio" name="status" value="輕度">
+            怪我
+          </label>
+
+          <label class="danger">
+            <input type="radio" name="status" value="危險">
+            危險
+          </label>
+        </div>
+
+        <label class="comment-label">コメント(任意)</label>
+        <textarea name="comment"></textarea>
+
+        <button type="submit">送信する</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
