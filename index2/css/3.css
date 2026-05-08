@@ -1,3 +1,4 @@
+/* ===== 全域設定 ===== */
 * {
   box-sizing: border-box;
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -6,29 +7,29 @@
 body {
   background-color: #f2f5f9;
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* 登入卡片寬度 */
+/* ===== 登入容器（桌機預設） ===== */
 .login-wrapper {
-  width: 420px;
+  width: 520px;        /* ✅ 桌機變大 */
+  max-width: 90vw;
+  padding: 24px;
 }
 
+/* ===== 登入卡片 ===== */
 .login-card {
   background: #ffffff;
   border-radius: 8px;
-
-  /* 上方縮短，下面保留空氣感 */
   padding: 24px 32px 32px;
-
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
-/* 標題：不吃高度 */
+/* ===== 標題 ===== */
 .title {
   text-align: center;
   color: #1f5fd7;
@@ -36,6 +37,7 @@ body {
   margin-bottom: 16px;
 }
 
+/* ===== 表單 ===== */
 .form-group {
   margin-bottom: 18px;
 }
@@ -47,17 +49,14 @@ label {
   color: #333;
 }
 
-
-
 .input-with-icon {
   position: relative;
 }
 
-/*  input */
 .input-with-icon input {
   width: 100%;
   height: 40px;
-  padding: 0 12px 0 42px; /* 左邊留給 icon */
+  padding: 0 12px 0 42px;
   font-size: 15px;
   border: 1px solid #ccd3dd;
   border-radius: 4px;
@@ -68,7 +67,7 @@ label {
   border-color: #1f5fd7;
 }
 
-/*  icon 共用樣式 */
+/* ===== icon 共用 ===== */
 .input-with-icon::before {
   content: "";
   position: absolute;
@@ -83,17 +82,17 @@ label {
   pointer-events: none;
 }
 
-/*  Email icon */
+/* Email icon */
 .input-with-icon.email::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%231f5fd7' viewBox='0 0 24 24'%3E%3Cpath d='M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z'/%3E%3C/svg%3E");
 }
 
-/*  Password icon */
+/* Password icon */
 .input-with-icon.password::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%231f5fd7' viewBox='0 0 24 24'%3E%3Cpath d='M7 14a5 5 0 1 1 4.9-6h7.6l1.5 1.5-2 2L20 13l-2 2-1.5-1.5-1.5 1.5H12A5 5 0 0 1 7 14zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6z'/%3E%3C/svg%3E");
 }
 
-/* 登入按鈕 */
+/* ===== 登入按鈕 ===== */
 .login-btn {
   width: 100%;
   height: 44px;
@@ -111,8 +110,50 @@ label {
   background-color: #174bb0;
 }
 
+/* ===== 手機專用調整 ===== */
+@media (max-width: 768px) {
 
+  body {
+    align-items: flex-start;
+    padding-top: 40px;
+  }
+
+  /* ===== 登入容器（預設：手機友善） ===== */
 .login-wrapper {
-  transform: scale(1.25);   
-  transform-origin: center;
+  width: 100%;
+  max-width: 420px;
+  padding: 16px;
+}
+
+  .login-card {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+}
+
+
+
+/* ===== 電腦版放大（不影響手機） ===== */
+@media (min-width: 1024px) {
+
+  .login-wrapper {
+    max-width: 520px;   /* ✅ 讓電腦版看起來更大 */
+    padding: 24px;
+  }
+
+  .login-card {
+    padding: 32px 40px 40px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .login-btn {
+    height: 48px;
+    font-size: 16px;
+  }
 }
