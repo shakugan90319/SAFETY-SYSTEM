@@ -114,3 +114,51 @@ button, .btn {
 .logout-btn:hover {
   background-color: #c62828;
 }
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .card {
+    min-width: unset;   /* ← 正確解除方式 */
+    width: 100%;
+    max-width: 100%;
+    margin: 16px auto;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  .status {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .status label {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .status input[type="radio"] {
+    transform: scale(1.4);
+    margin-right: 10px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  button {
+    font-size: 18px;
+    padding: 14px 0;
+  }
+}
