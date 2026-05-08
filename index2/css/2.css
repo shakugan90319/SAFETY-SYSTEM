@@ -124,3 +124,88 @@ h2 {
 }
 
 
+
+
+
+
+
+/* ===== 只給社員詳細頁用的手機優化 ===== */
+@media (max-width: 768px) {
+
+  .detail-page .container {
+    margin: 10px;
+    padding: 14px;
+    border-radius: 6px;
+  }
+
+  .detail-page h2 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  /* 只有詳細頁的表格才改直式 */
+  .detail-page .detail-table,
+  .detail-page .detail-table tbody,
+  .detail-page .detail-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .detail-page .detail-table tr {
+    margin-bottom: 10px;
+  }
+
+  .detail-page .detail-table th {
+    display: block;
+    width: 100%;
+    border-bottom: none;
+    background: #f0f4f8;
+    font-size: 13px;
+  }
+
+  .detail-page .detail-table td {
+    display: block;
+    width: 100%;
+    border-top: none;
+    font-size: 14px;
+  }
+
+  .detail-page .btn.cancel {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin-top: 12px;
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+  .detail-page .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    position: static; 
+  }
+
+  .detail-page .header-title,
+  .detail-page .logout {
+    position: static;   
+    transform: none;
+    font-size: 13px;
+    padding: 5px 10px;
+    white-space: nowrap;
+  }
+
+  
+  .detail-page .container {
+    min-width: 0;
+    width: auto;
+  }
+}

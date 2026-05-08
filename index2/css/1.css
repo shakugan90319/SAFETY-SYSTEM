@@ -2,6 +2,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f4f6f9;
   margin: 0;
+  zoom: 0.9;
 }
 
 .header {
@@ -162,3 +163,5 @@ button, .btn {
     padding: 14px 0;
   }
 }
+
+
